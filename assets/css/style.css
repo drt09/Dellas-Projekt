@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;1,9..40,300&family=Raleway:ital,wght@0,300;1,300&display=swap');
 
 #header{
+    top: auto;
+    position: absolute;
     margin-top: 50px;
     margin-left: 50px;
     padding-left: 20px;
@@ -11,7 +13,7 @@
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    width: 15%;
+    width: 280px;
 }
 
 h1{
@@ -75,4 +77,15 @@ h1{
       opacity: 1;
       transform: translateY(0%);
     }
+}
+
+#separateLine{
+    top: 5%;
+    position: absolute;
+    z-index: 10;
+    height: 90%;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.20);
+    margin-left: 380px;
+    margin-top: 10px;
 }
