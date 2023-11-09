@@ -2,7 +2,7 @@
     position: absolute;
     right: -410px;
     background: repeating-linear-gradient(160deg, rgba(255, 196, 0, 0.3), rgba(231, 177, 0, 0.3), rgba(255, 196, 0, 0.3) 9%),
-      radial-gradient(circle at bottom, rgba(100, 100, 100, 0.5), transparent);
+    radial-gradient(circle at bottom, rgba(100, 100, 100, 0.5), transparent), white;
     height: 99%;
     top: 0;
     margin: auto;
@@ -11,6 +11,7 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     transition: 0.2s linear;
+    z-index: 2;
   }
   
   #closeOpenDiv{
