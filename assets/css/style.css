@@ -5,7 +5,7 @@ body{
   overflow: hidden;
 }
 
-#mainDiv h1{
+#mainDiv #first{
     position: absolute;
     font-family: 'DM Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -13,7 +13,7 @@ body{
     margin-top: 295px;
 }
 
-#mainDiv h2{
+#mainDiv #second{
     position: absolute;
     font-family: 'DM Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -21,6 +21,14 @@ body{
     margin-right: 30px;
     right: 0;
     float: right;
+}
+
+#mainDiv #third{
+    position: absolute;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 30px;
+    margin-top: 805px;
 }
 
 #mainDiv{
