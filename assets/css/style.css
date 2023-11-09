@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,300&family=Raleway:ital,wght@0,300;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;1,9..40,300&family=Raleway:ital,wght@0,300;1,300&display=swap');
 
+body{
+  overflow: hidden;
+}
+
 #sideDiv{
     position:absolute;
     background: repeating-linear-gradient(160deg, rgba(255, 196, 0, 0.3), rgba(231, 177, 0, 0.3), rgba(255, 196, 0, 0.3) 9%),
@@ -183,6 +187,7 @@ h1{
   width: 500px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  transition: 0.2s linear;
 }
 
 #closeOpenDiv{
