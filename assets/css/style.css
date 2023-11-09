@@ -140,6 +140,5 @@ h1{
 }
 
 .imgBg:hover{
-  background: repeating-linear-gradient(160deg, rgba(255, 196, 0, 0.3), rgba(231, 177, 0, 0.3), rgba(255, 196, 0, 0.3) 9%),
-    radial-gradient(circle at bottom, rgba(100, 100, 100, 0.5), transparent);
+  background: repeating-linear-gradient(160deg, rgba(255, 196, 0, 0.3), rgba(231, 177, 0, 0.3), rgba(255, 196, 0, 0.3) 9%);
 }
