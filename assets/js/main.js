@@ -1,5 +1,6 @@
 function closeDiv(){
-    document.getElementById("listDiv").innerHTML = '<div id="closeOpenDiv" onclick="openDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div>'
+    document.getElementById("listDiv").innerHTML = 
+    '<div id="closeOpenDiv" onclick="openDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><h1 id="closedText">Bevásárló listák</h1>'
     document.getElementById("listDiv").style.right = "-410px"
     document.getElementById("closeOpenImg").style.rotate = "180deg"
     document.getElementById("closeOpenImg").style.marginRight = "10px"
