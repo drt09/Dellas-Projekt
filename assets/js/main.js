@@ -6,7 +6,8 @@ function closeDiv(){
 }
 
 function openDiv(){
-    document.getElementById("listDiv").innerHTML = '<div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"></div><div id="listWrite"></div>'
+    document.getElementById("listDiv").innerHTML = 
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"></div><div id="listWrite"></div>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
