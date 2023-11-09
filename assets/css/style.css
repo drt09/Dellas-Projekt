@@ -5,7 +5,7 @@
     position:absolute;
     background: repeating-linear-gradient(160deg, rgba(255, 196, 0, 0.3), rgba(231, 177, 0, 0.3), rgba(255, 196, 0, 0.3) 9%),
     radial-gradient(circle at bottom, rgba(100, 100, 100, 0.5), transparent);
-    width: 370px;
+    width: 390px;
     height: 95%;
     margin-top: 20px;
     top: 0;
@@ -102,7 +102,7 @@ h1{
     height: 90%;
     width: 2px;
     background-color: rgba(0, 0, 0, 0.20);
-    margin-left: 380px;
+    margin-left: 400px;
     margin-top: 10px;
 }
 
@@ -141,4 +141,32 @@ h1{
 
 .imgBg:hover{
   background: repeating-linear-gradient(160deg, rgba(255, 196, 0, 0.3), rgba(231, 177, 0, 0.3), rgba(255, 196, 0, 0.3) 9%);
+}
+
+#printDiv{
+  position: absolute;
+  bottom: 25px;
+  width: 350px;
+  height: 60px;
+  margin-left: 20px;
+  border-radius: 15px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 30px;
+  background-color: red;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+}
+
+#printDiv:hover{
+  background: repeating-linear-gradient(160deg, rgba(255, 239, 187, 0.3), rgba(255, 241, 191, 0.3), rgba(255, 239, 187, 0.3) 30%);
+  cursor: pointer;
+}
+
+#printIcon{
+  margin-top: 5px;
+}
+
+#printIcon img{
+  width: 50px;
 }
