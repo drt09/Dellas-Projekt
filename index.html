@@ -22,9 +22,9 @@
         <div id="separateLine"></div>
         <div id="options">
             <div id="icons">
-                <div class="imgBg listIcons" onclick="listMaker()"><img class="iconImg" src="assets/img/plus.png"></div>
-                <div class="imgBg listIcons"><img class="iconImg" src="assets/img/delete.png"></div>
-                <div class="imgBg listIcons"><img class="iconImg" src="assets/img/search.png"></div>
+                <div title="Új" class="imgBg listIcons" onclick="listMaker()"><img class="iconImg" src="assets/img/plus.png"></div>
+                <div title="Törlés" class="imgBg listIcons"><img class="iconImg" src="assets/img/delete.png"></div>
+                <div title="Keresés" class="imgBg listIcons"><img class="iconImg" src="assets/img/search.png"></div>
             </div>
         </div>
         <div id="printDiv">
@@ -37,18 +37,32 @@
         <h1 id="closedText">Bevásárló listák</h1>
     </div>
 
-    <div id="mainDiv">
-        <!--<h1 id="first">⬅ Készítsen egy új bevásárló listát!</h1>
+    <div id="mainDiv" class="mainFadeIn">
+        <h1 id="first">⬅ Készítsen egy új bevásárló listát!</h1>
         <h1 id="second">Nézze meg a bevásárló listáit! ➞</h1>
-        <h1 id="third">⬅ Nyomtassa ki a kész bevásárló listáit!</h1>-->
+        <h1 id="third">⬅ Nyomtassa ki a kész bevásárló listáit!</h1>
     </div>
 
-    <div id="listMaker">
+    <div class="mainFadeIn" id="listMaker">
         <div id="closeMaker"><img onclick="closeMaker()" src="assets/img/close.png" alt=""></div>
         <div id="listSave"><img src="assets/img/save.png"></div>
-        <div id="listInputDiv"><input type="text" id="listInput"></div>
+        <div id="listInputDiv"><div id="listInput" onkeydown="spanDelete()" contenteditable="true"><span id="listSpan">Kezdje el begépelni a listáját!</span></div></div>
+        <div id="buttonsDiv">
+            <div id="buttons">
+                <button class="buttons" onclick="execCmd('bold')" title="Félkövér"><b>B</b></button>
+                <button class="buttons" onclick="execCmd('italic')" title="Dölt"><b>/</b></button>
+                <button class="buttons" onclick="execCmd('underline')" title="Dölt"><b>_</b></button>
+                <button class="buttons" id="buttonPlus" onclick="numPlus()" title="+"><b>+</b></button>
+                <input type="text" id="buttonsNum" readonly min="10" max="18">
+                <button class="buttons" id="buttonMinus" onclick="numMinus()" title="-"><b>-</b></button>
+                <button class="buttons" id="left" onclick="execCmd('justifyLeft')" title="Balra igazítás"><b>I</b></button>
+                <button class="buttons" onclick="execCmd('justifyCenter')" title="Balra igazítás"><b>I</b></button>
+                <button class="buttons" id="right" onclick="execCmd('justifyRight')" title="Balra igazítás"><b>I</b></button>
+            </div>
+        </div>
     </div>
 </body>
 
 </html>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/other.js"></script>

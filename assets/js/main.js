@@ -17,9 +17,28 @@ function openDiv(){
 function listMaker(){
     document.getElementById("listMaker").style.display = "block"
     document.getElementById("mainDiv").innerHTML = ""
+    document.getElementById("buttonsNum").value = 12
+    document.getElementById("listInput").focus();
 }
 
 function closeMaker(){
     document.getElementById("listMaker").style.display = "none"
     document.getElementById("mainDiv").innerHTML = '<h1 id="first">⬅ Készítsen egy új bevásárló listát!</h1><h1 id="second">Nézze meg a bevásárló listáit! ➞</h1><h1 id="third">⬅ Nyomtassa ki a kész bevásárló listáit!</h1>'
+    document.getElementById("listInput").innerHTML = '<span id="listSpan">Kezdje el begépelni a listáját!</span>'
+}
+
+function numPlus(){
+    var num = document.getElementById("buttonsNum").value
+    num++
+    document.getElementById("buttonsNum").value = num
+}
+
+function numMinus(){
+    var num = document.getElementById("buttonsNum").value
+    num--
+    document.getElementById("buttonsNum").value = num
+}
+
+function spanDelete(){
+    document.getElementById("listSpan").innerHTML = ''
 }
