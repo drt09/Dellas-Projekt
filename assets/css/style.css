@@ -42,3 +42,52 @@ body{
     left: 430px;
     border-radius: 40px;
 }
+
+#listMaker{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    width: 69%;
+    height: 90%;
+    margin: auto;
+    top: 44px;
+    left: 448px;
+    border-radius: 40px;
+    border-bottom-right-radius: 100px;
+}
+
+#listSave{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    border-bottom-right-radius: 200px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    background: rgb(248, 229, 167);
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    cursor: pointer;
+}
+
+#listSave:hover{
+    background: rgb(253, 227, 140);
+    cursor: pointer;
+}
+
+#listSave img:hover{
+    width: 45px;
+    margin-left: 23px;
+    margin-top: 23px;
+    transition: 0.1s linear;
+}
+
+#listSave img{
+    margin-left: 25px;
+    margin-top: 25px;
+    rotate: -45deg;
+    width: 40px;
+    transition: 0.1s linear;
+}
