@@ -13,3 +13,13 @@ function openDiv(){
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
 }
+
+function listMaker(){
+    document.getElementById("listMaker").style.display = "block"
+    document.getElementById("mainDiv").innerHTML = ""
+}
+
+function closeMaker(){
+    document.getElementById("listMaker").style.display = "none"
+    document.getElementById("mainDiv").innerHTML = '<h1 id="first">⬅ Készítsen egy új bevásárló listát!</h1><h1 id="second">Nézze meg a bevásárló listáit! ➞</h1><h1 id="third">⬅ Nyomtassa ki a kész bevásárló listáit!</h1>'
+}

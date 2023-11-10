@@ -44,6 +44,7 @@ body{
 }
 
 #listMaker{
+    display: none;
     position: absolute;
     background: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.37);
@@ -90,4 +91,16 @@ body{
     rotate: -45deg;
     width: 40px;
     transition: 0.1s linear;
+}
+
+#closeMaker{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#closeMaker img{
+    width: 35px;
+    cursor: pointer;
 }
