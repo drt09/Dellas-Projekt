@@ -44,7 +44,7 @@ body{
 }
 
 #listMaker{
-    display: none;
+    /*display: none;*/
     position: absolute;
     background: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.37);
@@ -103,4 +103,28 @@ body{
 #closeMaker img{
     width: 35px;
     cursor: pointer;
+}
+
+#listInputDiv{
+    position: absolute;
+    background-color: red;
+    height: 95%;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background: rgb(248, 229, 167);
+    border: 2px solid rgba(0, 0, 0, 0.37);
+}
+
+#listInput{
+    position: absolute;
+    background-color: red;
+    height: 95%;
+    width: 90%;
+    margin-top: 17px;
+    margin-left: 21px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0, 0.37);
 }
