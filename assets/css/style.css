@@ -225,3 +225,15 @@ html, body{
 #right{
     padding-left: 20px;
 }
+
+#deleteList{
+    margin-top: 145px;
+    background-color: rgb(255, 107, 107);
+}
+#deleteList img{
+    transition: 0.1s linear;
+}
+#deleteList img:hover{
+    width: 25px;
+    transition: 0.1s linear;
+}
