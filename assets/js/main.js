@@ -35,9 +35,17 @@ function selectBox(){
 }
 
 function DeleteList(){
-    var num = 0
-    if (num == 1) {
-        
-    }
+    document.getElementById("Approve").style.display = "block"
+    document.getElementById("ApproveDiv").style.display = "block"
+}
+
+function Yes(){
     document.getElementById("listInput").innerHTML = ''
+    document.getElementById("Approve").style.display = "none"
+    document.getElementById("ApproveDiv").style.display = "none"
+}
+
+function No(){
+    document.getElementById("Approve").style.display = "none"
+    document.getElementById("ApproveDiv").style.display = "none"
 }
