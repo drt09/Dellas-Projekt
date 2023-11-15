@@ -17,7 +17,6 @@ function openDiv(){
 function listMaker(){
     document.getElementById("listMaker").style.display = "block"
     document.getElementById("mainDiv").innerHTML = ""
-    document.getElementById("buttonsNum").value = 12
     document.getElementById("listInput").focus();
 }
 
@@ -27,18 +26,18 @@ function closeMaker(){
     document.getElementById("listInput").innerHTML = '<span id="listSpan">Kezdje el begépelni a listáját!</span>'
 }
 
-function numPlus(){
-    var num = document.getElementById("buttonsNum").value
-    num++
-    document.getElementById("buttonsNum").value = num
-}
-
-function numMinus(){
-    var num = document.getElementById("buttonsNum").value
-    num--
-    document.getElementById("buttonsNum").value = num
-}
-
 function spanDelete(){
     document.getElementById("listSpan").innerHTML = ''
+}
+
+function selectBox(){
+    document.getElementById("listInput").innerHTML += '<input type="checkbox" class="checkbox">'
+}
+
+function DeleteList(){
+    var num = 0
+    if (num == 1) {
+        
+    }
+    document.getElementById("listInput").innerHTML = ''
 }

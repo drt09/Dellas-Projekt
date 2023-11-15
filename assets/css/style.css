@@ -186,7 +186,7 @@ html, body{
     padding: 3px;
     font-size: 25px;
     cursor: pointer;
-    transition: 0.1s ease-in;
+    transition: 0.2s ease-in;
 }
 
 #buttonsNum{
@@ -203,22 +203,6 @@ html, body{
     font-weight: bold;
 }
 
-#medium{
-    font-size: 15px;
-}
-#medium:hover{
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.1s ease-in;
-}
-#small{
-    font-size: 10px;
-}
-#small:hover{
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.1s ease-in;
-}
 #left{
     padding-right: 20px;
 }
@@ -227,13 +211,21 @@ html, body{
 }
 
 #deleteList{
-    margin-top: 145px;
-    background-color: rgb(255, 107, 107);
+    margin-top: 5px;
+    margin-left: 4px;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 13px;
+    background: rgb(255, 131, 131);
+    border: 2px solid rgba(0, 0, 0, 0.37);  
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
 }
-#deleteList img{
-    transition: 0.1s linear;
-}
-#deleteList img:hover{
-    width: 25px;
-    transition: 0.1s linear;
+
+.checkbox{
+    width: 20px;
+    height: 20px;
 }

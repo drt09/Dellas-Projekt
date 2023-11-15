@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/side.css">
     <link rel="stylesheet" href="assets/css/list.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dellas</title>
 </head>
 
@@ -51,14 +52,12 @@
             <div id="buttons">
                 <button class="buttons" onclick="execCmd('bold')" title="Félkövér"><b>B</b></button>
                 <button class="buttons" onclick="execCmd('italic')" title="Dölt"><b>/</b></button>
-                <button class="buttons" onclick="execCmd('underline')" title="Dölt"><b>_</b></button>
-                <button class="buttons" id="buttonPlus" onclick="numPlus()" title="+"><b>+</b></button>
-                <input type="text" id="buttonsNum" readonly min="10" max="18">
-                <button class="buttons" id="buttonMinus" onclick="numMinus()" title="-"><b>-</b></button>
+                <button class="buttons" onclick="execCmd('underline')" title="Aláhúz"><b>_</b></button>
                 <button class="buttons" id="left" onclick="execCmd('justifyLeft')" title="Balra igazítás"><b>I</b></button>
-                <button class="buttons" onclick="execCmd('justifyCenter')" title="Balra igazítás"><b>I</b></button>
-                <button class="buttons" id="right" onclick="execCmd('justifyRight')" title="Balra igazítás"><b>I</b></button>
-                <button class="buttons" id="deleteList" onclick="DeleteList()" title="Törlés"><b><img src="assets/img/delete.png" alt=""></b></button>
+                <button class="buttons" onclick="execCmd('justifyCenter')" title="Középre igazítás"><b>I</b></button>
+                <button class="buttons" id="right" onclick="execCmd('justifyRight')" title="Jobbra igazítás"><b>I</b></button>
+                <button class="buttons" onclick="selectBox()" title="Kijelölés"><i class="fa fa-square-o"></i></button>
+                <button id="deleteList" onclick="DeleteList()" title="Törlés"><b><img src="assets/img/delete.png"></b></button>
             </div>
         </div>
     </div>
