@@ -139,6 +139,11 @@
   cursor: pointer;
 }
 
+.listChooseBtn::after{
+  content: " ";
+  word-break: break-all;
+}
+
 #listChoose{
   display: inline-flex;
   overflow-x: scroll;
@@ -176,4 +181,21 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+#listEditorName{
+  position: absolute;
+  right: 0;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  width: 580px;
+  text-align: center;
+  margin-right: 70px;
+  margin-top: 50px;
+}
+
+#listEditorName span{
+  text-align: center;
 }

@@ -8,7 +8,7 @@ function closeDiv(){
 
 function openDiv(){
     document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="9" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
@@ -16,7 +16,7 @@ function openDiv(){
 
 function newList(){
     document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="9" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
@@ -31,7 +31,9 @@ function listMaker(){
         alert("Van")
     }
     else
-    document.getElementById("listChoose").innerHTML += "<button class='listChooseBtn'>"+listName+"</button>"
+    document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+listName+"</button>"
+    document.getElementById("name").innerHTML = listName
+    listNameBreak()
 }
 
 function closeMaker(){
