@@ -149,6 +149,10 @@
   margin-left: 15px;
 }
 
+#listChoose > *{
+  flex: 0 0 auto;
+}
+
 /* width */
 ::-webkit-scrollbar {
   height: 5px;
