@@ -66,12 +66,17 @@ function No(){
     document.getElementById("ApproveDiv").style.display = "none"
 }
 
+let listNumber = 0
 function SaveList(){
-    setCookie("shoppinglist",document.getElementById("listInput").innerHTML,30)
+    for (let i = 0; i < listNumber.length; i++) {
+        listNumber++
+        setCookie("shoppinglist_"+listNumber,document.getElementById("listChooseBtn").innerHTML,30)
+    }
 }
 
-function loadList(){
-    let x = getCookie("shoppinglist")
-    if (x != "") document.getElementById("listInput").innerHTML = x
-
+function listOpen(){
+    for (let i = 0; i < listNumber.length; i++) {
+        let x = getCookie("shoppinglist_"+listNumber)
+        if (x != "") document.getElementById("listInput").innerHTML = x
+    }
 }
