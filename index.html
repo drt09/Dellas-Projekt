@@ -12,7 +12,7 @@
     <title>Dellas</title>
 </head>
 
-<body>
+<body onload="loadList()">
     <div id="ApproveDiv"><div id="Approve"><h1>Biztos ki akarja törölni listáját?</h1><button onclick="Yes()">Igen</button><button onclick="No()">Nem</button></div></div>
 
     <div id="sideDiv">
@@ -25,7 +25,7 @@
         <div id="separateLine"></div>
         <div id="options">
             <div id="icons">
-                <div title="Új" class="imgBg listIcons" onclick="listMaker()"><img class="iconImg" src="assets/img/plus.png"></div>
+                <div title="Új" class="imgBg listIcons" onclick="newList()"><img class="iconImg" src="assets/img/plus.png"></div>
                 <div title="Törlés" class="imgBg listIcons"><img class="iconImg" src="assets/img/delete.png"></div>
                 <div title="Keresés" class="imgBg listIcons"><img class="iconImg" src="assets/img/search.png"></div>
             </div>
@@ -48,7 +48,7 @@
 
     <div class="mainFadeIn" id="listMaker">
         <div id="closeMaker"><img onclick="closeMaker()" src="assets/img/close.png" alt=""></div>
-        <div id="listSave"><img src="assets/img/save.png"></div>
+        <div id="listSave" onclick="SaveList()"><img src="assets/img/save.png"></div>
         <div id="listInputDiv"><div id="listInput" onkeydown="spanDelete()" contenteditable="true"><span id="listSpan">Kezdje el begépelni a listáját!</span></div></div>
         <div id="buttonsDiv">
             <div id="buttons">
@@ -66,5 +66,5 @@
 </body>
 
 </html>
-<script src="assets/js/main.js"></script>
 <script src="assets/js/other.js"></script>
+<script src="assets/js/main.js"></script>

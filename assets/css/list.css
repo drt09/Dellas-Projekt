@@ -80,3 +80,66 @@
     height: 1500px;
     width: 1550px;
 }
+
+#listDiv h2{
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-align: center;
+}
+
+#listName{
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 20px;
+  margin: 0;
+  margin-left: 20px;
+  width: 270px;
+  height: 40px;
+  background: rgb(248, 229, 167);
+  border: 2px solid rgba(0, 0, 0, 0.37); 
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#newListBtn{
+  position: relative;
+  top: -4px;
+  height: 46px;
+  width: 100px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.listChooseBtn{
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100px;
+  height: 60px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgba(0, 0, 0, 0.37);
+  border-radius: 15px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+#listChoose{
+  overflow: scroll;
+  height: 60px;
+  width: 450px;
+}
