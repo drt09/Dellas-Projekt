@@ -12,6 +12,10 @@ function openDiv(){
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
+    for (let i = 0; i < listBtnNum.length; i++) {
+        let y = getCookie("listBtn_"+listBtnNum)
+        if (y != "") document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+y+"</button>"
+    }
 }
 
 function newList(){
@@ -22,6 +26,7 @@ function newList(){
     document.getElementById("closeOpenImg").style.marginRight = "0px"
 }
 
+let listBtnNum = 0
 function listMaker(){
     let listName = document.getElementById("listName").value
     document.getElementById("listMaker").style.display = "block"
@@ -33,7 +38,10 @@ function listMaker(){
     else
     document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+listName+"</button>"
     document.getElementById("name").innerHTML = listName
-    listNameBreak()
+    for (let i = 0; i < listBtnNum.length; i++) {
+        listBtnNum++
+        setCookie("listBtn_"+listBtnNum,document.getElementById("listChooseBtn").innerHTML,30)
+    }
 }
 
 function closeMaker(){
@@ -70,7 +78,7 @@ let listNumber = 0
 function SaveList(){
     for (let i = 0; i < listNumber.length; i++) {
         listNumber++
-        setCookie("shoppinglist_"+listNumber,document.getElementById("listChooseBtn").innerHTML,30)
+        setCookie("shoppinglist_"+listNumber,document.getElementById("").innerHTML,30)
     }
 }
 
