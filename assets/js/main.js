@@ -1,32 +1,13 @@
-function closeDiv(){
-    document.getElementById("listDiv").innerHTML = 
-    '<div id="closeOpenDiv" onclick="openDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><h1 id="closedText">Bevásárló listák</h1>'
-    document.getElementById("listDiv").style.right = "-410px"
-    document.getElementById("closeOpenImg").style.rotate = "180deg"
-    document.getElementById("closeOpenImg").style.marginRight = "10px"
+let listNumber = 0
+let listBtn = []
+
+function loadCookies(){
+    for (let i = 0; i < listBtn.length; i++) {
+      let y = getCookie("listBtn_"+i)
+      document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+y+"</button>"
+  }
 }
 
-function openDiv(){
-    document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
-    document.getElementById("listDiv").style.right = "-0px"
-    document.getElementById("closeOpenImg").style.rotate = "0deg"
-    document.getElementById("closeOpenImg").style.marginRight = "0px"
-    for (let i = 0; i < listBtnNum.length; i++) {
-        let y = getCookie("listBtn_"+listBtnNum)
-        if (y != "") document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+y+"</button>"
-    }
-}
-
-function newList(){
-    document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
-    document.getElementById("listDiv").style.right = "-0px"
-    document.getElementById("closeOpenImg").style.rotate = "0deg"
-    document.getElementById("closeOpenImg").style.marginRight = "0px"
-}
-
-let listBtnNum = 0
 function listMaker(){
     let listName = document.getElementById("listName").value
     document.getElementById("listMaker").style.display = "block"
@@ -38,10 +19,51 @@ function listMaker(){
     else
     document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+listName+"</button>"
     document.getElementById("name").innerHTML = listName
-    for (let i = 0; i < listBtnNum.length; i++) {
-        listBtnNum++
-        setCookie("listBtn_"+listBtnNum,document.getElementById("listChooseBtn").innerHTML,30)
+    for (let i = 0; i < document.getElementsByClassName("listChooseBtn").length; i++) {
+        listBtn.push(setCookie("listBtn_"+i,document.getElementsByClassName("listChooseBtn").innerHTML,30))
     }
+}
+
+function SaveList(){
+    for (let i = 0; i < listNumber.length; i++) {
+        listNumber++
+        setCookie("shoppinglist_"+listNumber,document.getElementById("").innerHTML,30)
+    }
+}
+
+function listOpen(){
+    for (let i = 0; i < listNumber.length; i++) {
+        let x = getCookie("shoppinglist_"+listNumber)
+        if (x != "") document.getElementById("listInput").innerHTML = x
+    }
+}
+
+function openDiv(){
+    document.getElementById("listDiv").innerHTML = 
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
+    document.getElementById("listDiv").style.right = "-0px"
+    document.getElementById("closeOpenImg").style.rotate = "0deg"
+    document.getElementById("closeOpenImg").style.marginRight = "0px"
+    for (let i = 0; i < listBtn.length; i++) {
+        let y = getCookie("listBtn_"+i)
+        document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+y+"</button>"
+    }
+}
+
+function closeDiv(){
+    document.getElementById("listDiv").innerHTML = 
+    '<div id="closeOpenDiv" onclick="openDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><h1 id="closedText">Bevásárló listák</h1>'
+    document.getElementById("listDiv").style.right = "-410px"
+    document.getElementById("closeOpenImg").style.rotate = "180deg"
+    document.getElementById("closeOpenImg").style.marginRight = "10px"
+}
+
+function newList(){
+    document.getElementById("listDiv").innerHTML = 
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
+    document.getElementById("listDiv").style.right = "-0px"
+    document.getElementById("closeOpenImg").style.rotate = "0deg"
+    document.getElementById("closeOpenImg").style.marginRight = "0px"
 }
 
 function closeMaker(){
@@ -72,19 +94,4 @@ function Yes(){
 function No(){
     document.getElementById("Approve").style.display = "none"
     document.getElementById("ApproveDiv").style.display = "none"
-}
-
-let listNumber = 0
-function SaveList(){
-    for (let i = 0; i < listNumber.length; i++) {
-        listNumber++
-        setCookie("shoppinglist_"+listNumber,document.getElementById("").innerHTML,30)
-    }
-}
-
-function listOpen(){
-    for (let i = 0; i < listNumber.length; i++) {
-        let x = getCookie("shoppinglist_"+listNumber)
-        if (x != "") document.getElementById("listInput").innerHTML = x
-    }
 }
