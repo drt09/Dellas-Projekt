@@ -48,12 +48,16 @@
   #listWrite{
       position: absolute;
       right: 23px;
-      width: 450px;
-      height: 630px;
+      width: 410px;
+      height: 590px;
       margin-top: 275px;
       border-radius: 20px;
       background-color: rgba(255, 255, 255, 0.8);
       border: 2px solid rgba(0, 0, 0, 0.37);
+      font-family: 'DM Sans', sans-serif;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      padding: 20px;
   }
   
   #listText{

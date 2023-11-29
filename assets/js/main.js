@@ -32,6 +32,12 @@ function SaveList(){
 
 function listOpen(x){
     let s = getCookie(x)
+    document.getElementById("mainDiv").innerHTML = ""
+    document.getElementById("listWrite").innerHTML = s
+}
+
+function listEdit(x){
+    let s = getCookie(x)
     document.getElementById("listMaker").style.display = "block"
     document.getElementById("mainDiv").innerHTML = ""
     document.getElementById("listInput").innerHTML = s
@@ -40,7 +46,7 @@ function listOpen(x){
 
 function openDiv(){
     document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div><button onclick="listEdit(\""+listName+"\")">Szerkesztés</button>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
