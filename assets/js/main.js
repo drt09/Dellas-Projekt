@@ -38,7 +38,11 @@ function listOpen(x){
         }
     }
     document.getElementById("listWName").innerHTML = x
+    for (y of s) {
+        document.getElementById("listEditBtn").innerHTML = '<button onclick="listEdit("'+y+'")">Szerkesztés</button>'
+    }
 }
+    
 
 function listEdit(x){
     let s = getCookie(x)
@@ -49,12 +53,11 @@ function listEdit(x){
 
 function openDiv(){
     document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"><div id="listWName"></div><div id="listWText"></div></div>'
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"><div id="listWName"></div><div id="listWText"></div><div id="listEditBtn"></div></div>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
     for (x of listBtn){
-        console.log(x)
         document.getElementById("listChoose").innerHTML += "<button onclick='listOpen(\""+x+"\")' class='listChooseBtn'>"+x+"</button>"
     }
 }
@@ -69,7 +72,7 @@ function closeDiv(){
 
 function newList(){
     document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"><div id="listWName"></div><div id="listWText"></div></div>'
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"><div id="listWName"></div><div id="listWText"></div><div id="listEditBtn"></div></div>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
