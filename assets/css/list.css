@@ -203,3 +203,12 @@
 #listEditorName span{
   text-align: center;
 }
+
+#listWName{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.37);
+  height: 30px;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}

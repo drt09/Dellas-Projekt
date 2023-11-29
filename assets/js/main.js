@@ -1,4 +1,3 @@
-let listNumber = 0
 let listBtn = []
 
 function loadCookies(){
@@ -8,7 +7,7 @@ function loadCookies(){
     }
 }
 
-function listMaker(s = ""){
+function listMaker(s = "", l = ""){
     var listName = document.getElementById("listName").value
     document.getElementById("listMaker").style.display = "block"
     document.getElementById("mainDiv").innerHTML = ""
@@ -32,8 +31,13 @@ function SaveList(){
 
 function listOpen(x){
     let s = getCookie(x)
-    document.getElementById("mainDiv").innerHTML = ""
-    document.getElementById("listWrite").innerHTML = s
+    document.getElementById("listWText").innerHTML = s
+    for (let i = 0; i < s.length; i++) {
+        if (document.getElementsByClassName("listChooseBtn").innerHTML == s) {
+            x = document.getElementsByClassName("listChooseBtn").innerHTML
+        }
+    }
+    document.getElementById("listWName").innerHTML = x
 }
 
 function listEdit(x){
@@ -41,17 +45,16 @@ function listEdit(x){
     document.getElementById("listMaker").style.display = "block"
     document.getElementById("mainDiv").innerHTML = ""
     document.getElementById("listInput").innerHTML = s
-    document.getElementById("listnameTxt").innerHTML = x
 }
 
 function openDiv(){
     document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div><button onclick="listEdit("'+listName+'")">Szerkesztés</button>'
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"><div id="listWName"></div><div id="listWText"></div></div>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
-    console.log(listBtn)
     for (x of listBtn){
+        console.log(x)
         document.getElementById("listChoose").innerHTML += "<button onclick='listOpen(\""+x+"\")' class='listChooseBtn'>"+x+"</button>"
     }
 }
@@ -66,7 +69,7 @@ function closeDiv(){
 
 function newList(){
     document.getElementById("listDiv").innerHTML = 
-    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"></div>'
+    '<div id="listText"><h2>Bevásárló listák</h2></div><div id="closeOpenDiv" onclick="closeDiv()"><img id="closeOpenImg" src="assets/img/arrow.png"></div><div id="listChooser"><h2>Írja be a bevásárló lista nevét</h2><input type="text" maxlength="15" id="listName"><button id="newListBtn" onclick="listMaker()">Létrehoz</button><div id="listChoose"></div></div><div id="listWrite"><div id="listWName"></div><div id="listWText"></div></div>'
     document.getElementById("listDiv").style.right = "-0px"
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
