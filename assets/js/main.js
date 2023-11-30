@@ -119,6 +119,7 @@ function listDeleteOpen(x){
     }
 }
 
+
 function listDeleteClose(){
     document.getElementById("listDeleteDiv").style.display = "none"
     document.getElementById("listDelete").style.display = "none"
