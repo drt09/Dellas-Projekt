@@ -76,7 +76,7 @@ function newList(){
     document.getElementById("closeOpenImg").style.rotate = "0deg"
     document.getElementById("closeOpenImg").style.marginRight = "0px"
     for (x of listBtn){
-        document.getElementById("listChoose").innerHTML += "<button onclick='listOpen()' class='listChooseBtn'>"+x+"</button>"
+        document.getElementById("listChoose").innerHTML += "<button onclick='listOpen(\""+x+"\")' class='listChooseBtn'>"+x+"</button>"
     }
 }
 
