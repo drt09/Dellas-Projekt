@@ -284,3 +284,108 @@ html, body{
     cursor: pointer;
     transition: 0.1s linear;
 }
+
+
+#listDelete{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(0, -50%);
+    margin: auto;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    display: none;
+    height: 600px;
+    width: 800px;
+    background: rgb(248, 229, 167);
+    border: 2px solid rgba(0, 0, 0, 0.37); 
+    z-index: 15;
+    border-radius: 20px;
+}
+
+#listDeleteDiv{
+    position: absolute;
+    display: none;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+#listDeleteCloseI{
+        position: absolute;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin: auto;
+        color: white;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+}
+
+#listDeleteList > *{
+    flex: 0 0 auto;
+}
+
+#listDeleteList{
+    position: absolute;
+    height: 500px;
+    width: 99%;
+    margin-top: 50px;
+    overflow-y: scroll;
+}
+
+#listDeleteList::-webkit-scrollbar {
+    height: 5px;
+    width: 10px;
+  }
+  
+  /* Track */
+  #listDeleteList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;  
+    width: 10px;
+  }
+  
+  /* Handle */
+  #listDeleteList::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 15px;
+    width: 10px;
+  }
+  
+  /* Handle on hover */
+  #listClistDeleteList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.listDeleteBtn{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.listDeleteBtns{
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+    width: 90%;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listDeleteBtns span{
+    margin-right: 20px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.listDeleteBtns img{
+    width: 40px;
+    height: 40px;
+}

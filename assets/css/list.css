@@ -69,6 +69,26 @@
     font-family: 'Raleway', sans-serif;
   }
 
+.listEditBtn{
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  background: rgb(248, 229, 167);
+  border: 2px solid rgba(0, 0, 0, 0.37); 
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+#listEditBtn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 #closeOpenImg{
     rotate: 180deg;
     margin-right: 10px;
@@ -141,6 +161,7 @@
   margin-top: 2px;
   margin-left: 10px;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .listChooseBtn::after{
@@ -163,27 +184,27 @@
 }
 
 /* width */
-::-webkit-scrollbar {
+#listChoose::-webkit-scrollbar {
   height: 5px;
   width: 350px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+#listChoose::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 15px;  
   width: 350px;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+#listChoose::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 15px;
   width: 350px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+#listChoose::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 

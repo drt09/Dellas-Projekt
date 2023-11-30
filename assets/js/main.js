@@ -38,9 +38,8 @@ function listOpen(x){
         }
     }
     document.getElementById("listWName").innerHTML = x
-    for (y of s) {
-        document.getElementById("listEditBtn").innerHTML = '<button onclick="listEdit("'+y+'")">Szerkesztés</button>'
-    }
+    document.getElementById("listEditBtn").innerHTML = "<button onclick='listEdit(\""+x+"\")' class='listEditBtn'><img src='assets/img/edit.png'></button>"
+    document.getElementById("listnameTxt").innerHTML = x
 }
     
 
@@ -109,4 +108,24 @@ function Yes(){
 function No(){
     document.getElementById("Approve").style.display = "none"
     document.getElementById("ApproveDiv").style.display = "none"
+}
+
+function listDeleteOpen(x){
+    document.getElementById("listDeleteDiv").style.display = "block"
+    document.getElementById("listDelete").style.display = "block"
+    document.getElementById("listDeleteClose").innerHTML += "<img onclick='listDeleteClose()' id='listDeleteCloseI' src='assets/img/close.png'>"
+    for (x of listBtn){
+        document.getElementById("listDeleteList").innerHTML += "<div class='listDeleteBtns'><span>"+x+"</span><img onclick='listDeleteFcn("+x+")' class='listDeleteBtn' src='assets/img/delete_big.png'></div>"
+    }
+}
+
+function listDeleteClose(){
+    document.getElementById("listDeleteDiv").style.display = "none"
+    document.getElementById("listDelete").style.display = "none"
+}
+
+function listDeleteFcn(){
+    for (x in listBtn){
+        
+    }
 }
