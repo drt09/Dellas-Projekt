@@ -115,7 +115,7 @@ function listDeleteOpen(x){
     document.getElementById("listDelete").style.display = "block"
     document.getElementById("listDeleteClose").innerHTML += "<img onclick='listDeleteClose()' id='listDeleteCloseI' src='assets/img/close.png'>"
     for (x of listBtn){
-        document.getElementById("listDeleteList").innerHTML += "<div class='listDeleteBtns'><span>"+x+"</span><img onclick='listDeleteFcn("+x+")' class='listDeleteBtn' src='assets/img/delete_big.png'></div>"
+        document.getElementById("listDeleteList").innerHTML += "<div class='listDeleteBtns' id='"+x+"'><span>"+x+"</span><img onclick='listDeleteFcn()' class='listDeleteBtn' src='assets/img/delete_big.png'></div>"
     }
 }
 
@@ -127,7 +127,8 @@ function listDeleteClose(){
 }
 
 function listDeleteFcn(){
-    for (x in listBtn){
-        
+    let s = getCookie(x)
+    for (let i = 0; i < s.length; i++) {
+        s = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
     }
 }
