@@ -27,7 +27,7 @@
             <div id="icons">
                 <div title="Új" class="imgBg listIcons" onclick="newList()"><img class="iconImg" src="assets/img/plus.png"></div>
                 <div title="Törlés" onclick="listDeleteOpen()" class="imgBg listIcons"><img class="iconImg" src="assets/img/delete.png"></div>
-                <div title="Keresés" class="imgBg listIcons"><img class="iconImg" src="assets/img/search.png"></div>
+                <div title="Keresés" onclick="listSearch()" class="imgBg listIcons"><img class="iconImg" src="assets/img/search.png"></div>
             </div>
         </div>
         <div id="printDiv">
@@ -69,6 +69,14 @@
         <div id="listDelete">
             <div id="listDeleteClose"></div>
             <div id="listDeleteList"></div>
+        </div>
+    </div>
+
+    <div id="listSearchDiv">
+        <div id="listSearch">
+            <div id="listSearchInp"><input type="text"></div>
+            <div id="listSearchClose"></div>
+            <div id="listSearchList"></div>
         </div>
     </div>
 </body>

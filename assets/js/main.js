@@ -109,13 +109,14 @@ function No(){
     document.getElementById("Approve").style.display = "none"
     document.getElementById("ApproveDiv").style.display = "none"
 }
-
+let y = 0
 function listDeleteOpen(x){
+    y++
     document.getElementById("listDeleteDiv").style.display = "block"
     document.getElementById("listDelete").style.display = "block"
-    document.getElementById("listDeleteClose").innerHTML += "<img onclick='listDeleteClose()' id='listDeleteCloseI' src='assets/img/close.png'>"
+    document.getElementById("listDeleteClose").innerHTML += "<img onclick='listDeleteClose()' src='assets/img/close.png'>"
     for (x of listBtn){
-        document.getElementById("listDeleteList").innerHTML += "<div class='listDeleteBtns' id='"+x+"'><span>"+x+"</span><img onclick='listDeleteFcn()' class='listDeleteBtn' src='assets/img/delete_big.png'></div>"
+        document.getElementById("listDeleteList").innerHTML += "<div class='listDeleteBtns'><span>"+x+"</span><img onclick='listDeleteFcn("+y+")' class='listDeleteBtn' src='assets/img/delete_big.png'></div>"
     }
 }
 
@@ -124,11 +125,25 @@ function listDeleteClose(){
     document.getElementById("listDeleteDiv").style.display = "none"
     document.getElementById("listDelete").style.display = "none"
     document.getElementById("listDeleteList").innerHTML = ""
+    document.getElementById("listDeleteClose").innerHTML = ""
 }
 
-function listDeleteFcn(){
-    let s = getCookie(x)
-    for (let i = 0; i < s.length; i++) {
-        s = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+function listDeleteFcn(z){
+
+}
+
+function listSearch(){
+    document.getElementById("listSearchDiv").style.display = "block"
+    document.getElementById("listSearch").style.display = "block"
+    document.getElementById("listSearchClose").innerHTML += "<img onclick='listSearchClose()' src='assets/img/close.png'>"
+    for (x of listBtn){
+        document.getElementById("listSearchList").innerHTML += "<div class='listDeleteBtns'><span>"+x+"</span><img onclick='listDeleteFcn("+y+")' class='listDeleteBtn' src='assets/img/delete_big.png'></div>"
     }
+}
+
+function listSearchClose(){
+    document.getElementById("listSearchDiv").style.display = "none"
+    document.getElementById("listSearch").style.display = "none"
+    document.getElementById("listSearchList").innerHTML = ""
+    document.getElementById("listSearchClose").innerHTML = ""
 }

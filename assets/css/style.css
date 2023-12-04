@@ -314,16 +314,23 @@ html, body{
     background-color: rgba(0, 0, 0, 0.40);
 }
 
-#listDeleteCloseI{
-        position: absolute;
-        right: 0;
-        margin-top: 10px;
-        margin-right: 10px;
-        margin: auto;
-        color: white;
-        width: 35px;
-        height: 35px;
-        cursor: pointer;
+#listDeleteClose{
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#listDeleteClose img{
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
 
 #listDeleteList > *{
@@ -334,7 +341,7 @@ html, body{
     position: absolute;
     height: 500px;
     width: 99%;
-    margin-top: 50px;
+    margin-top: 60px;
     overflow-y: scroll;
 }
 
@@ -389,3 +396,107 @@ html, body{
     width: 40px;
     height: 40px;
 }
+
+#listSearch{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(0, -50%);
+    margin: auto;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    display: none;
+    height: 600px;
+    width: 800px;
+    background: rgb(248, 229, 167);
+    border: 2px solid rgba(0, 0, 0, 0.37); 
+    z-index: 15;
+    border-radius: 20px;
+}
+
+#listSearchDiv{
+    position: absolute;
+    display: none;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+#listSearchClose{
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#listSearchClose img{
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#listSearchList > *{
+    flex: 0 0 auto;
+}
+
+#listSearchList{
+    position: absolute;
+    height: 500px;
+    width: 99%;
+    margin-top: 80px;
+    overflow-y: scroll;
+}
+
+#listSearchInp{
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#listSearchInp input{
+    width: 80%;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+#listSearchList::-webkit-scrollbar {
+    height: 5px;
+    width: 10px;
+  }
+  
+  /* Track */
+  #listSearchList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;  
+    width: 10px;
+  }
+  
+  /* Handle */
+  #listSearchList::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 15px;
+    width: 10px;
+  }
+  
+  /* Handle on hover */
+  #listClistSearchList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
